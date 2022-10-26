@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ex 2</title>
+</head>
+<body>
+    <h2 style="color:red ;">for exercise 2</h2>
+    <p id="result"></p>
+    <script>  
+        function print(list1){
+            document.getElementById('result').innerHTML += `${list1} </br>`
+        }
+
+        function DeleteElement(list1 , element){
+            for (let i = 0; i < list1.length; i++){
+                if (list1[i] == element ){
+                    list1.splice(i, 1)
+                    i--
+                }  
+            }
+            return list1;
+        }
+
+        print (DeleteElement([1, 2, 3 ,1 ,4], 1))
+    </script>
+
+    
+</body>
+</html>

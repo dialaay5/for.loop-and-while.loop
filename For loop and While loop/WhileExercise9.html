@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EX 9</title>
+</head>
+<body>
+    <h2 style="color: green;"> while exercise 9</h2>
+    <p id="result"></p>
+    <script>
+        function print(arr){
+            document.getElementById('result').innerHTML += `${arr} </br>`
+        }
+
+        function Booleanlist(arr){
+            // כל עוד הערך שווה למספר שונה מאפס אז ממומר לאמת
+            let i = 0
+            let index = 0
+
+            while(i < arr.length){
+                if(arr[i] == 0){
+                    index = i
+                    return index;
+                }
+                i++
+            }
+        }
+
+       
+        print(Booleanlist([1, 0, 55, 88, 9, 0]))
+        
+        
+
+  
+
+
+
+    </script>
+
+    
+</body>
+</html>

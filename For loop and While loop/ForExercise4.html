@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ex 4</title>
+</head>
+<body>
+    <h2 style="color:red ;">for exercise 4</h2>
+    <p id="result"></p>
+    <script>
+        function print(arr){
+            document.getElementById('result').innerHTML += `${arr} </br>`
+        }
+        let Repeating_arr = []
+        function findDup(arr){
+            for(let i = 0; i < arr.length; i++){
+                for(let x = i + 1; x < arr.length; x++){
+                    if(arr[x] == arr[i]){
+                        Repeating_arr.push(arr[x])
+                    }
+                }
+
+            }
+            return Repeating_arr;
+        }
+
+        print(findDup([1, 2, 3, 4, 5, 5, 2,6]))
+
+
+
+    </script>
+    
+</body>
+</html>

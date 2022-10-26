@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ex 3</title>
+</head>
+<body>
+    <h2 style="color:red ;">for exercise 3</h2>
+    <p id="result"></p>
+
+    <script>
+        function print(arr){
+            document.getElementById('result').innerHTML += `${arr} </br>`
+        }
+
+        
+        function PrintEven (arr){
+            let even = 0
+            for(let i = 0; arr.length > i; i++){
+                if (arr[i] % 2 == 0){
+                    even++
+                }
+            }
+            return even;
+        }
+
+        function PrintOdd (arr){
+            let odd = 0
+            for( let j = 0; arr.length > j; j++){
+                if (arr[j] % 2 != 0){
+                    odd++
+                }
+            }
+            return odd;
+        }
+
+
+    print(PrintEven([1, 2, 3, 4, 5, 5]))
+    print(PrintOdd([1, 2, 3, 4, 5, 5]))
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ex 6</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        
+        const arr = [1, 5, 'LC101','blue', 42];
+        const string = "LaunchCode";
+
+        for (let i = 0; arr.length > i; i++){
+            document.getElementById('result').innerHTML += `${arr[i]} <br/>`
+        }
+
+        for (let j = string.length -1 ; j >= 0; j--){
+            document.getElementById('result').innerHTML += `${string[j]} <br/>`
+        }
+
+
+    </script>
+    
+</body>
+</html>

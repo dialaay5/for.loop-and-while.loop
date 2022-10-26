@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ex 8</title>
+</head>
+<body>
+    <h2 style="color: green;"> while exercise 8</h2>
+    <p id="result"></p>
+    <script>
+        function print(arr){
+            document.getElementById('result').innerHTML += `${arr} </br>`
+        }
+
+        let sum = 0
+        function my_sum(arr, number){
+            let i = 0
+            while (sum < number){
+                if( i > arr.length){
+                    break;
+                }
+                sum += arr[i]
+                i++
+        }
+        return sum;   
+    }
+
+    print(my_sum([1, 2, 3, 4], 4))
+     </script>
+    
+</body>
+</html>

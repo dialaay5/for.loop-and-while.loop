@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>EX 10</title>
+</head>
+<body>
+    <h2 style="color: green;"> while exercise 10</h2>
+    <p id="result"></p>
+    <script>
+        function print(arr){
+            document.getElementById('result').innerHTML += `${arr} </br>`
+        }
+
+        function PrintIndex(arr){
+            let i = 0
+            let index = 0
+            const string = "hello"
+            while (i < arr.length){
+                if (arr[i] == string && i % 2 != 0){ 
+                    index = i
+                    break;
+                }
+                i++   
+            }
+            return index;
+
+        }
+
+        print(PrintIndex(['diala', 'yhya', 'hello' ,'itay','ayan', 'hello']))
+
+    </script>   
+</body>
+</html>
