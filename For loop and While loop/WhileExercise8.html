@@ -14,17 +14,16 @@
         let sum = 0
         function my_sum(arr, number){
             let i = 0
-            while (sum < number){
-                if( i > arr.length){
-                    break;
+            while (i < arr.length){
+                if( sum < number){
+                     sum += arr[i]  
                 }
-                sum += arr[i]
                 i++
         }
         return sum;   
     }
 
-    print(my_sum([1, 2, 3, 4], 4))
+    print(my_sum([2, 3, 4], 4))
      </script>
     
 </body>
