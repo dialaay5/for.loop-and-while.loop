@@ -4,29 +4,25 @@
     <title>Ex 3</title>
 </head>
 <body>
-    <h2 style="color:red ;">for exercise 3</h2>
     <p id="result"></p>
-
     <script>
         function print(arr){
             document.getElementById('result').innerHTML += `${arr} </br>`
         }
 
-        
-         function odd_even(arr){
-            let result = {even: 0, odd: 0}
+        function odd_even(arr){
+            let even = 0;
+            let odd = 0
                 for(let i = 0; arr.length > i; i++){
-                if (arr[i] % 2 == 0){
-                    even++
-                } 
-                else {
-                    odd++
-                }
+                if (arr[i] % 2 == 0) even++
+                else odd++ 
             }
-            return result
+            return {even: even, odd: odd}
         }
+        let resultObject = odd_even([1, 2, 3 ,1 ,4]);
 
-        print (odd_even([1, 2, 3 ,1 ,4]))
+
+        print(JSON.stringify(resultObject))
     </script>
 </body>
 </html>
