@@ -4,29 +4,37 @@
     <title>Ex 4</title>
 </head>
 <body>
-    <h2 style="color:red ;">for exercise 4</h2>
     <p id="result"></p>
     <script>
         function print(arr){
             document.getElementById('result').innerHTML += `${arr} </br>`
         }
-       function findDup(arr){
-            let Repeating_arr = []
-            const result1 = {Repeating_arr : []}
+
+        function findDup(arr){
+            const result1 = { }; // מייצרים אובייקט (מחסנית ביניים)
             for(let i = 0; i < arr.length; i++){
-                for(let x = i + 1; x < arr.length; x++){
+                for(let x = 0 ; x < arr.length; x++){
                     if(arr[x] == arr[i]){
-                        Repeating_arr.push(arr[x])
+                        if(result1[arr[x]] == undefined){
+                            result1[arr[x]] = 1   
+                        }
+                        else {
+                            result1[arr[x]]++
+                        }
+                        
                     }
-
                 }
-
             }
-            return result1 ;
 
+            const result2 = { };
+            for (let itemplace in result1){
+                if (result1[itemplace] != 1){
+                    result2[itemplace] = Math.sqrt(result1[itemplace]);
+                }
+            }
+            return result2;
         }
-
-        print(findDup([1, 2, 3, 4, 5, 5, 2,6]))
+        print(JSON.stringify(findDup([1, 2, 3, 4, 5, 5, 2, 6, 2, 34, 2, 8, 34, 34])));
 
     </script>
     
